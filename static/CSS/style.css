@@ -1,0 +1,46 @@
+/* Estilo personalizado para um botão */
+.my-custom-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* background.css */
+body {
+    background-image: url("/static/images/cadastro.jpg"); /* Substitua 'seu_fundo.jpg' pelo nome da sua imagem */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Isso define a altura para ocupar a altura da janela do navegador */
+}
+
+/* Defina a imagem de fundo */
+body {
+    background-image: url("../images/foto_login.jpg");
+    background-size: cover; /* Cobrir a tela inteira com a imagem */
+    background-repeat: no-repeat; /* Evitar a repetição da imagem */
+}
+
+
+
+/* Animação de fundo */
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Aplicar a animação à classe 'animated-background' */
+.animated-background {
+    animation: backgroundAnimation 10s linear infinite;
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+}
+
+.text-danger {
+    color: #FF0000; /* Cor vermelha para mensagem de erro */
+}
+

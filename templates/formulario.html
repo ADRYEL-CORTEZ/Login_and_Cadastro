@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulário</title>
+    <!-- Inclua o CSS do Bootstrap -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/background.css') }}">
+<!-- Outros links CSS -->
+
+<!-- Outros links CSS -->
+    <script>
+        function validarSenha() {
+            var senha = document.getElementById("senha").value;
+            var confirmarSenha = document.getElementById("confirmar_senha").value;
+
+            if (senha !== confirmarSenha) {
+                alert("As senhas não coincidem. Tente novamente.");
+                return false; // Impede o envio do formulário
+            }
+            return true; // Permite o envio do formulário se as senhas coincidirem
+        }
+    </script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Meu Site</a>   
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Login</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/criar_login">Criar Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Formulário de Cadastro</h1>
+        <!-- Formulário de Cadastro com Bootstrap -->
+        <form onsubmit="return validarSenha();"> 
+            <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo">
+            </div>
+            <div class="form-group">
+                <label for="cpf">CPF</label>
+                <input type="text" class="form-control" id="cpf" placeholder="Digite seu CPF">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Digite seu email">
+            </div>
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="tel" class="form-control" id="telefone" placeholder="Digite seu telefone">
+            </div>
+            <div class="form-group">
+                <label for="endereco">Endereço</label>
+                <input type="text" class="form-control" id="endereco" placeholder="Digite seu endereço">
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" class="form-control" id="senha" placeholder="Digite sua senha">
+            </div>
+            <div class="form-group">
+                <label for="confirmar_senha">Confirmar Senha</label>
+                <input type="password" class="form-control" id="confirmar_senha" placeholder="Confirme sua senha">
+            </div>
+
+            <span id="senha-erro" class="text-danger"></span>
+
+           
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            
+        </form>
+
+        
+
+
+    </div>
+</body>
+</html>
